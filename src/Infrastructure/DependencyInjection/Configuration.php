@@ -10,11 +10,8 @@ final class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('sylius_order_comments');
-
-        return $treeBuilder;
+        return new TreeBuilder('sylius_order_comments');
     }
 }
